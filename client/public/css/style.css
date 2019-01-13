@@ -13,12 +13,12 @@ body {
 
 .container {
     margin: 2% auto;
-    width: 760px;
+    width: 560px;
     background: #444753;
 }
 
 .users-list {
-    width: 270px;
+    width: 200px;
     float: left;
 }
 .users-list .search {
@@ -39,7 +39,7 @@ body {
 }
 .users-list ul {
     padding: 20px;
-    max-height: 770px;
+    max-height: 200px;
 }
 .users-list ul li {
     padding-bottom: 20px;
@@ -352,6 +352,11 @@ a.logout-btn:hover:enabled, a.logout-btn:active, a.logout-btn:focus {
 .chat .chat-history .my-message {
     text-align: initial;
 }
+
+.chat .private-history .my-message {
+    text-align: initial;
+}
+
 .error {
     text-align: center;
 }

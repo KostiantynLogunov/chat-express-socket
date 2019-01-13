@@ -29,9 +29,17 @@ module.exports = app => {
     app.use('/assets', express.static('./client/public'));
 
     app.get('/', checkAuth, (req, res) => {
-        // res.writeHead(200, {"userok": `${req.user.username}`});
         res.cookie('username', req.user.username);
         res.render('index.html', { username: req.user.username });
+    });
+    app.get('/private', checkAuth, (req, res) => {
+        res.cookie('username', req.user.username);
+        res.cookie('id', req.user.id);
+        UsersModel.find({}).exec((err, users) => {
+            if (err) console.error('Error in rinding users for private chat', err);
+            // console.log(users);
+            res.render('private.html', { username: req.user.username, users: users });
+        });
     });
 
     app.post('/login', async (req, res) => {

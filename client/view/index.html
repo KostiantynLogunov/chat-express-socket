@@ -32,9 +32,14 @@
         </div>
         <script src="/assets/js/unauth.js"></script>
     {% else %}
+        <div style="text-align: center;">
+            <a href="/private">Go to Private Chat</a>
+        </div>
         <div class="container clearfix">
+
             <div class="chat">
                 <div class="chat-header clearfix">
+                    <div> <b>General chat</b></div>
                     <div class="chat-about">
                         <div class="chat-num-users">Hello, <span id="name">{{ username }}</span></div>
                     </div>
