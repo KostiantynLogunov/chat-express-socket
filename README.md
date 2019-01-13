@@ -1,6 +1,6 @@
 ## General and PRIVATE chats (nodejs, express, socket.io, mongodb, mongoose and etc).Here is auth with JWT.
 > A Chats  project
-```
+```bash
 # 1. Check your nodejs and mongodb versions:
   node -v mongod -v
 
